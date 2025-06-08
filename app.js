@@ -260,7 +260,8 @@ class SavingsCalculator {
             this.finalAmountDisplay.textContent = this.formatCurrency(results.finalAmount);
 
             // Update progress bar
-            this.progressFill.style.width = `${Math.min(100, Math.max(0, results.progressPercentage))}%`;
+            // this.progressFill.style.width = `${Math.min(100, Math.max(0, results.progressPercentage))}%`;
+            this.progressFill.style.width = `${results.finalAmount - results.totalSaved)}%`;
 
             // Remove animation classes
             setTimeout(() => {
